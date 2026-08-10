@@ -79,6 +79,6 @@ patch_rebase_result: clean; 6 downstream commits replayed in a temporary worktre
 host_tests: CMake smoke is executed by scripts/sync_upstream.py and CI
 target_tests: not run; curl port gate pending
 qemu_smoke: not applicable while the curl target port is not selected
-last_known_good: norx/last-known-good at 3eef449b02fa86fbcfa57166f0ee550d2e8e0a73
-rollback_revision: norx/last-known-good at 3eef449b02fa86fbcfa57166f0ee550d2e8e0a73
+last_known_good: norx/last-known-good at 1f8057663328164caa55aec12b2f53ec5a85e25c
+rollback_revision: norx/last-known-good at 1f8057663328164caa55aec12b2f53ec5a85e25c
 ```
