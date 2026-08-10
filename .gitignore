@@ -28,6 +28,7 @@
 /.vs
 /bld/
 /build/
+/upstream-sync-report.json
 /stats/
 __pycache__
 Debug

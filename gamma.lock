@@ -18,7 +18,7 @@ patch_series_sha256 = "7b99a24deb7884822c9dc2194f58eeec3303bc01ddc6e8506b0a80d50
 
 [provenance]
 document = "UPSTREAM.md"
-document_sha256 = "e522c3d7b5ca2335479393a39a97fa8f1e064963d51c2e83761eee86ca77e40a"
+document_sha256 = "db09e6eba41eeece9d118a0313814de636c9ffcc61923f35a8b3c880cc745fdf"
 license_spdx = "LicenseRef-curl"
 trademark_review = "COPYING advertising/name restriction recorded in UPSTREAM.md"
 build_options_sha256 = ""

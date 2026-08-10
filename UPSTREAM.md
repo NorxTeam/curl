@@ -24,6 +24,11 @@ queue or in reviewable commits on that branch.
 The nearest historical tag is `rc-8_22_0-1`, but the recorded baseline is the
 full immutable commit above because `upstream/master` had advanced beyond it.
 
+The repeatable sync procedure is `scripts/sync_upstream.py`. It fetches
+`upstream`, rebases the maintained branch in a temporary worktree, preserves
+the current branch as `norx/last-known-good`, and emits a JSON report. The CI
+entry point is `.github/workflows/upstream-sync.yml`.
+
 ## Preserved notices and obligations
 
 | Field | Value |
@@ -74,6 +79,6 @@ patch_rebase_result: baseline fork; no patches to rebase
 host_tests: not run; no Norx changes
 target_tests: not run; curl port gate pending
 qemu_smoke: not applicable to the untouched baseline
-last_known_good: 2d30fd26a060e7c3de3393503fb5ba7e8f3840f8
-rollback_revision: upstream/master at 2d30fd26a060e7c3de3393503fb5ba7e8f3840f8
+last_known_good: norx/last-known-good at 1baeb7653c07727ba2a2f612eb96da2d21222ff4
+rollback_revision: norx/last-known-good at 1baeb7653c07727ba2a2f612eb96da2d21222ff4
 ```

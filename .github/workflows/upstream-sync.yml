@@ -1,0 +1,46 @@
+name: Upstream sync
+
+on:
+  push:
+    branches: [norx/curl-port]
+    paths:
+      - UPSTREAM.md
+      - gamma.toml
+      - gamma.lock
+      - patches/**
+      - scripts/sync_upstream.py
+      - .github/workflows/upstream-sync.yml
+  pull_request:
+    branches: [norx/curl-port]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out maintained branch
+        uses: actions/checkout@v4
+        with:
+          ref: norx/curl-port
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Add upstream remote
+        run: git remote add upstream https://github.com/curl/curl.git
+
+      - name: Rebase and run smoke checks
+        run: python scripts/sync_upstream.py --branch norx/curl-port --report upstream-sync-report.json
+
+      - name: Upload sync report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: curl-upstream-sync-report
+          path: upstream-sync-report.json
