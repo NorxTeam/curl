@@ -1,7 +1,7 @@
 # Upstream provenance: curl
 
-Status: baseline fork created for the Norx curl port; no Norx source patch has
-been applied yet.
+Status: upstream baseline synchronized for the Norx curl port; no Norx source
+patch has been applied yet.
 
 ## Identity
 
@@ -13,9 +13,9 @@ been applied yet.
 | Required remote name | `upstream` |
 | Norx push remote | `origin` |
 | Upstream baseline tag | `none; baseline is upstream/master` |
-| Upstream baseline commit | `2d30fd26a060e7c3de3393503fb5ba7e8f3840f8` |
+| Upstream baseline commit | `1cf6be5a0b4a1db8c501dcda8ac98e09970fd372` |
 | Imported at | `2026-08-10 UTC` |
-| Last synchronized commit | `2026-08-10; 2d30fd26a060e7c3de3393503fb5ba7e8f3840f8` |
+| Last synchronized commit | `2026-08-10; 1cf6be5a0b4a1db8c501dcda8ac98e09970fd372` |
 
 The fork's `master` branch is the untouched upstream baseline. Norx work starts
 on `norx/curl-port`; future changes must remain in the ordered `patches/`
@@ -66,19 +66,19 @@ out of the queue.
 | Hash algorithm | `SHA-256` when the first build profile exists |
 | Artifact hash scope | `not generated` |
 
-This baseline fork contains source and provenance only. No Norx binary, SDK,
+This synchronized fork contains source and provenance only. No Norx binary, SDK,
 or generated sysroot is claimed to be a curl release artifact.
 
 ## Sync record
 
 ```text
 sync_date_utc: 2026-08-10
-old_upstream_commit: none
-new_upstream_commit: 2d30fd26a060e7c3de3393503fb5ba7e8f3840f8
-patch_rebase_result: baseline fork; no patches to rebase
-host_tests: not run; no Norx changes
+old_upstream_commit: 2d30fd26a060e7c3de3393503fb5ba7e8f3840f8
+new_upstream_commit: 1cf6be5a0b4a1db8c501dcda8ac98e09970fd372
+patch_rebase_result: clean; 3 downstream commits replayed in a temporary worktree
+host_tests: CMake smoke is executed by scripts/sync_upstream.py and CI
 target_tests: not run; curl port gate pending
-qemu_smoke: not applicable to the untouched baseline
+qemu_smoke: not applicable while the curl target port is not selected
 last_known_good: norx/last-known-good at 1baeb7653c07727ba2a2f612eb96da2d21222ff4
 rollback_revision: norx/last-known-good at 1baeb7653c07727ba2a2f612eb96da2d21222ff4
 ```

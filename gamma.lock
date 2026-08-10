@@ -11,14 +11,14 @@ release = 0
 repository = "https://github.com/NorxTeam/curl.git"
 upstream_repository = "https://github.com/curl/curl.git"
 upstream_tag = "none"
-upstream_commit = "2d30fd26a060e7c3de3393503fb5ba7e8f3840f8"
-fork_commit = "d3e96eb7c9abab4c9bc485081de2c49c0e2b2c4f"
+upstream_commit = "1cf6be5a0b4a1db8c501dcda8ac98e09970fd372"
+fork_commit = "b9d46e14c39de745423add4dd6f9146969c14e68"
 patch_series = "patches/series"
 patch_series_sha256 = "7b99a24deb7884822c9dc2194f58eeec3303bc01ddc6e8506b0a80d506a02801"
 
 [provenance]
 document = "UPSTREAM.md"
-document_sha256 = "db09e6eba41eeece9d118a0313814de636c9ffcc61923f35a8b3c880cc745fdf"
+document_sha256 = "bc98ebb857cfba7e0ba3a8cc00b9da31a47960c372cb62c4bab9d820eb480ab6"
 license_spdx = "LicenseRef-curl"
 trademark_review = "COPYING advertising/name restriction recorded in UPSTREAM.md"
 build_options_sha256 = ""

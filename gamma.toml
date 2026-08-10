@@ -14,7 +14,7 @@ repository = "https://github.com/NorxTeam/curl.git"
 subdir = "."
 upstream_repository = "https://github.com/curl/curl.git"
 upstream_tag = "none"
-upstream_commit = "2d30fd26a060e7c3de3393503fb5ba7e8f3840f8"
+upstream_commit = "1cf6be5a0b4a1db8c501dcda8ac98e09970fd372"
 patch_series = "patches/series"
 
 [provenance]
