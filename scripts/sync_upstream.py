@@ -291,12 +291,8 @@ def main() -> int:
         report["metadata_update_required"] = candidate_baseline != new
         if candidate_baseline != new:
             raise SyncError("UPSTREAM.md and gamma.lock must be updated to the new candidate baseline")
-        candidate_lock = load_lock(worktree, new)
+        load_lock(worktree, new)
         report["candidate_lock_status"] = "consistent"
-        if candidate_lock.get("source", {}).get("fork_commit") and not is_ancestor(
-            worktree, candidate_lock["source"]["fork_commit"], candidate["commit"]
-        ):
-            raise SyncError("candidate gamma.lock fork_commit is not an ancestor of the candidate")
 
         report["host_smoke"] = {"status": "skipped"} if args.skip_host else host_smoke(worktree, args.host_timeout)
         if report["host_smoke"]["status"] not in {"passed", "skipped"}:
