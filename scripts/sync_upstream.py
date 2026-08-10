@@ -155,7 +155,14 @@ def host_smoke(worktree: Path, timeout: int) -> dict[str, Any]:
     if records[-1]["status"] == "passed":
         records.append(command(["cmake", "--build", str(build), "--parallel", "2"], worktree, timeout))
     if records[-1]["status"] == "passed":
-        binaries = [build / "src" / "curl", build / "src" / "curl.exe", build / "src" / "Release" / "curl.exe"]
+        binaries = [
+            build / "src" / "curl",
+            build / "src" / "curl.exe",
+            build / "src" / "Debug" / "curl",
+            build / "src" / "Debug" / "curl.exe",
+            build / "src" / "Release" / "curl",
+            build / "src" / "Release" / "curl.exe",
+        ]
         binary = next((path for path in binaries if path.exists()), None)
         if binary is None:
             records.append({"status": "failed", "reason": "built curl executable was not found"})
