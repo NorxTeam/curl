@@ -1,0 +1,29 @@
+schema = "gamma-recipe"
+schema_version = 1
+status = "provenance-only"
+
+[package]
+name = "curl"
+version = "0.0.0"
+release = 0
+license = "LicenseRef-curl"
+
+[source]
+kind = "git-fork"
+repository = "https://github.com/NorxTeam/curl.git"
+subdir = "."
+upstream_repository = "https://github.com/curl/curl.git"
+upstream_tag = "none"
+upstream_commit = "2d30fd26a060e7c3de3393503fb5ba7e8f3840f8"
+patch_series = "patches/series"
+
+[provenance]
+document = "UPSTREAM.md"
+trademark_review = "COPYING advertising/name restriction recorded in UPSTREAM.md"
+build_options = []
+generated_manifest = "not-generated"
+
+[build]
+system = "deferred"
+network = false
+

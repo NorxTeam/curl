@@ -1,0 +1,37 @@
+schema = "gamma-lock"
+version = 1
+status = "provenance-only"
+
+[package]
+name = "curl"
+version = "0.0.0"
+release = 0
+
+[source]
+repository = "https://github.com/NorxTeam/curl.git"
+upstream_repository = "https://github.com/curl/curl.git"
+upstream_tag = "none"
+upstream_commit = "2d30fd26a060e7c3de3393503fb5ba7e8f3840f8"
+fork_commit = "d3e96eb7c9abab4c9bc485081de2c49c0e2b2c4f"
+patch_series = "patches/series"
+patch_series_sha256 = "7b99a24deb7884822c9dc2194f58eeec3303bc01ddc6e8506b0a80d506a02801"
+
+[provenance]
+document = "UPSTREAM.md"
+document_sha256 = "e522c3d7b5ca2335479393a39a97fa8f1e064963d51c2e83761eee86ca77e40a"
+license_spdx = "LicenseRef-curl"
+trademark_review = "COPYING advertising/name restriction recorded in UPSTREAM.md"
+build_options_sha256 = ""
+generated_manifest = "not-generated"
+generated_manifest_sha256 = ""
+
+[provenance.license_files]
+"COPYING" = "2eb469aebc37f20dda0960d9a5b03bfb8c0bb8a9d3fa5be0a356aa02fd0a8673"
+"LICENSES/curl.txt" = "ff07e4b495993cdd714f01607151ef98d20ce71f237de671679ce78ce8146607"
+"LICENSES/ISC.txt" = "7052c69becab1e8487729cdfd95e22578550e767a5dc7e34e35c6a447d111ed8"
+"LICENSES/BSD-4-Clause-UC.txt" = "cc97842462ef81e2ac1a2c2e2aa83ba78b85001c02685337a16e809c3f089f69"
+
+[artifacts]
+target_status = "not-selected"
+hash_algorithm = "SHA-256"
+hashes = []
