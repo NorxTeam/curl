@@ -75,10 +75,10 @@ or generated sysroot is claimed to be a curl release artifact.
 sync_date_utc: 2026-08-10
 old_upstream_commit: 2d30fd26a060e7c3de3393503fb5ba7e8f3840f8
 new_upstream_commit: 1cf6be5a0b4a1db8c501dcda8ac98e09970fd372
-patch_rebase_result: clean; 3 downstream commits replayed in a temporary worktree
+patch_rebase_result: clean; 6 downstream commits replayed in a temporary worktree
 host_tests: CMake smoke is executed by scripts/sync_upstream.py and CI
 target_tests: not run; curl port gate pending
 qemu_smoke: not applicable while the curl target port is not selected
-last_known_good: norx/last-known-good at 1baeb7653c07727ba2a2f612eb96da2d21222ff4
-rollback_revision: norx/last-known-good at 1baeb7653c07727ba2a2f612eb96da2d21222ff4
+last_known_good: norx/last-known-good at 3eef449b02fa86fbcfa57166f0ee550d2e8e0a73
+rollback_revision: norx/last-known-good at 3eef449b02fa86fbcfa57166f0ee550d2e8e0a73
 ```
